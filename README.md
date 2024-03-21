@@ -21,28 +21,51 @@ Testing the webserver.
 
 ## PROGRAM:
 
-```
-
+```C
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webserver</title>
-</head>
+
+<html>
+	<title>web page </title>
 <body>
-    <h1>Top 5 Revenue Companies</h1>
-    <ol>
-        <li>Apple</li>
-        <li>Google</li>
-        <li>Amazon</li>
-        <li>Samsung</li>
-        <li>TATA</li>
-    </ol>
+	<table border="3" cellspacing="10">
+	<caption> Top five Revenue Generating Software Companies </caption>
+	<tr>
+		<th> S.NO </th>
+		<th>Company </th>
+		<th> Revenue </th>
+	</tr>
+	<tr>
+	<td> 1 </td>
+	<td> MICROSOFT </td>
+	<td> 65 Billion </td>
+	</tr>
+	<tr>
+	<td> 2 </td>
+	<td> Oracle </td>
+	<td> 29.6 billion </td>
+	</tr>
+	<tr>
+	<td> 3 </td>
+	<td> IBM </td>
+	<td> 29.1 billion </td>
+	</tr>
+	<tr>
+	<td> 4 </td>
+	<td> SAP </td>
+	<td> 6.4 billion </td>
+	</tr>
+	<tr>
+	<td> 5 </td>
+	<td> Symantec </td>
+	<td> 5.6 billion </td>
+	</tr>
+	</table>
 </body>
 </html>
+ 
+
+
 """
 class myhandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -55,14 +78,15 @@ server_address = ('',8000)
 httpd = HTTPServer(server_address,myhandler)
 print("my webserver is running...")
 httpd.serve_forever()
+
+
+
+
 ```
 
 ## OUTPUT:
-![image](https://github.com/indrajasukumar/simplewebserver/assets/145115195/41f25e5b-bb5c-4f9b-b280-abdba50f7ca9)
-![image-1](https://github.com/indrajasukumar/simplewebserver/assets/145115195/338b512e-15b6-49e5-b9a6-23c2a4f8890a)
-
-
-
+![1](https://github.com/Rajkiran276/simplewebserver/assets/147471453/204942a2-ff22-4fb3-b6dd-7d3f2f2763bf)
+![2](https://github.com/Rajkiran276/simplewebserver/assets/147471453/96e38aa3-8ff9-431c-9629-938223983674)
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
